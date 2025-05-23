@@ -165,7 +165,16 @@ La expresión genérica sería la siguiente.
 
 lista = [expresión for elemento in iterable if condición]
 
-Por lo tanto la expresión sólo se aplicará al elemento si se cumple la condición. Veamos un ejemplo con una frase, de la que queremos saber el número de erres que tiene.
+Por lo tanto la expresión sólo se aplicará al elemento si se cumple la condición. 
+
+```python
+>>> numeros = [1,2,3,4,5,6]
+>>> pares_por_dos = [x*2 for x in numeros if x%2==0]    # hacer la operacion solo si x es par
+>>> print(pares_por_dos)
+[4,8,12]
+```
+
+Veamos un ejemplo con una frase, de la que queremos saber el número de erres que tiene.
 
 ```python
 >>> frase = "El perro de san roque no tiene rabo"
