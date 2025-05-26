@@ -24,8 +24,11 @@ Hay una diferencia muy importante entre un objeto y una variable, y es que mient
 ### Pilares de la Programación Orientada a Objetos
 
 * **Abstracción**: es cuando separamos los datos de un objeto para luego generar un molde (una clase).
+Cuando se creó la clase gato (gato_class.py) se defieron propiedades o atributos como Nombre, Edad, Raza y Sexo, asi como una accion presentar(). Esto nos sirve de "molde" para poder crear nuevos objetos del mismo tipo, con distinas caracteristicas.
 * **Encapsulamiento**: se utiliza cuando es necesario que ciertos métodos o propiedades sean inviolables o inalterables.
+Se refiere a la OCULTACION de los detalles internos de una clase para proteger los datos y comportamientos de la misma frente a accesos no autorizados o modificaciones accidentales.
 Un ejemplo del encapsulamiento podría ser una cuenta de banco, donde el usuario no puede simplemente aumentar su balance de dinero, si no que debe depender de unos métodos previamente validados para aumentar dicho balance (depósitos, transferencias, etc).
+(Ver banco_class.py)
 * **Herencia**: permite crear nuevas clases a partir de otras. Si tuviéramos una clase “Autos” y quisiéramos crear unas clases “Auto deportivo” o “Auto clásico”, podríamos tomar varias propiedades y métodos de la clase “Autos”. Esto nos da una jerarquía de padre e hijo.
 * **Polimorfismo**: proviene de poli = muchas, morfismo = formas. Se utiliza para crear métodos con el mismo nombre pero con diferente comportamiento.
 
@@ -251,7 +254,9 @@ Creados en la clase hija por lo tanto no existentes en la clase padre: picar()
 
 ### Uso de super()
 
-La función super() nos permite acceder a los métodos de la clase padre desde una de sus hijas. Volvamos al ejemplo de Animal y Perro.
+La función super() nos permite acceder a los métodos de la clase padre desde una de sus hijas. 
+La sintaxis para usar super() es simple: super().metodo() llama al método deseado de la clase padre. 
+Volvamos al ejemplo de Animal y Perro.
 
 ``` python
 >>> class Animal:
@@ -386,7 +391,7 @@ Es importante notar que Python busca los módulos en las rutas indicadas por el 
 >>> print(sys.path)
 ```
 
-Como es obvio, verás que la carpeta de tu proyecta está incluida, pero ¿y si queremos importar un módulo en una ubicación distinta? Pues bien, podemos añadir al sys.path la ruta en la que queremos que Python busque.
+Como es obvio, verás que la carpeta de tu proyecto está incluida, pero ¿y si queremos importar un módulo en una ubicación distinta? Pues bien, podemos añadir al sys.path la ruta en la que queremos que Python busque.
 
 ``` python
 >>> import sys
