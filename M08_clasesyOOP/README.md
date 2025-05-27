@@ -384,7 +384,13 @@ Desde nuestro ejemplo.py, podemos importar el módulo modulo.py de la siguiente 
 Hola
 ```
 
-Es importante notar que Python busca los módulos en las rutas indicadas por el **sys.path**. Es decir, cuando se importa un módulo, lo intenta buscar en dichas carpetas. Puedes ver tu sys.path de la siguiente manera:
+Es importante notar que Python busca los módulos en las rutas indicadas por el **sys.path**. Es decir, cuando se importa un módulo, lo intenta buscar en dichas carpetas. 
+
+sys.path es una lista en Python que contiene las rutas de búsqueda de módulos. Cuando importas un módulo en Python, el intérprete busca ese módulo en los directorios incluidos en sys.path. Estos directorios pueden incluir la ubicación del script actual, los directorios de la biblioteca estándar de Python y cualquier otro directorio personalizado que hayas agregado.
+
+La modificación de sys.path te permite controlar qué directorios se consideran al buscar módulos. Puedes agregar o eliminar directorios según tus necesidades, lo que resulta útil cuando trabajas con módulos personalizados o estructuras de carpetas no convencionales. Sin embargo, debes tener cuidado al modificar sys.path, ya que puede afectar el correcto funcionamiento de tu programa si se realizan cambios incorrectos.
+
+Puedes ver tu sys.path de la siguiente manera:
 
 ``` python
 >>> import sys
@@ -400,7 +406,13 @@ Como es obvio, verás que la carpeta de tu proyecto está incluida, pero ¿y si 
 
 Una vez realizado esto, los módulos contenidos en dicha carpeta podrán ser importados sin problema como hemos visto anteriormente.
 
-Por otro lado, es posible cambiar el nombre del módulo usando **as**. Imaginemos que tenemos un módulo moduloconnombrelargo.py.
+Por otro lado, es posible cambiar el nombre del módulo usando **as**. 
+
+En Python, puedes usar la palabra clave "as" para asignar un alias a un objeto o módulo. Por ejemplo, puedes importar un módulo y darle un nombre más corto usando "as". Por ejemplo: import math as m asigna el alias "m" al módulo "math", lo que te permite acceder a sus funciones utilizando m.funcion() en lugar de math.funcion().
+
+Por otro lado, la función dir() en Python se utiliza para obtener una lista de los nombres existentes en el espacio de nombres actual. Puedes llamar a dir() sin argumentos para obtener los nombres definidos en el alcance global, o pasarlo un objeto como argumento para obtener los nombres disponibles en ese objeto. Esta función es útil para explorar los atributos y métodos disponibles en un objeto determinado, ayudándote a entender qué funcionalidades ofrece y cómo interactuar con ellas.
+
+Imaginemos que tenemos un módulo moduloconnombrelargo.py.
 
 ``` python
 >>> # moduloconnombrelargo.py
