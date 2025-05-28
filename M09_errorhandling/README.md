@@ -88,6 +88,13 @@ OK
 <unittest.main.TestProgram at 0x2226bd153d0>
 ```
 
+
+### Observaciones sobre parametros o argumentos:
+**argv**: proporciona al codigo o lineas de comandos, argumentos que puedan necesitarse en las pruebas, en estos casos, se deja vacio.
+**verbosity**: cantidad de informacion de depuracion que se urilizara durante las pruebas, en estos casos, se mostraran 1 linea de resumen para cada uno de los metodos de prueba y asi como una linea detallada para cada prueba que falla.
+**exit**: se utiliza para evitar que la ejecucion de la prueba se detenga despues de ejecutar las mismas. Al establecer en False, cualquier codigo adicional en el archivo de pruebas se ejecutaran despues de que las pruebas hayan sido ejecutadas. 
+
+
 ### Seguir el código paso a paso ó 'Debugging'
 
 Los bugs son un problema que les sucede a todos, sin embargo si realizamos test a nuestro programa probablemente tendremos menos bugs, pero esto no es suficiente.
@@ -158,7 +165,7 @@ Codigo con el principio EAFP.
 try:
     return paises[pais]
 except KeyError:
-     return None
+    return None
 ```
 
 ``` javascript
